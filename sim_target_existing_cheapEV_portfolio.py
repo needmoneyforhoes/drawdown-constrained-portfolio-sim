@@ -43,7 +43,7 @@ import random
 import statistics
 from collections import defaultdict, Counter
 
-LOG_DIR = "/home/polybot/polymarket-bot/quant_bots_logs_replay"
+LOG_DIR = "./quant_bots_logs_replay"
 LOG_GLOB = os.path.join(LOG_DIR, "race_test_btc-updown-5m-*.log")
 
 START_BALANCE = 9.0
@@ -339,7 +339,7 @@ def main():
         "best": best,
         "top15": results[:15],
     }
-    with open("/home/polybot/polymarket-bot/data/sim_target_existing_cheapEV_portfolio_results.json", "w") as f:
+    with open("./data/sim_target_existing_cheapEV_portfolio_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nWrote results json.")
     return best

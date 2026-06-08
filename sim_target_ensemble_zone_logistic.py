@@ -57,7 +57,7 @@ PnL model (real-money, Polymarket):
 Outputs:
     - Prints a tuning table over (cutoff, fire-size, zone, ride toggle).
     - Picks the BEST config (target-met preferred; else best median at DD<$5).
-    - Writes /home/polybot/polymarket-bot/.ensemble_zone_logistic_summary.json
+    - Writes ./.ensemble_zone_logistic_summary.json
 """
 
 import json
@@ -69,8 +69,8 @@ from collections import defaultdict
 
 import numpy as np
 
-PANEL_PATH = "/home/polybot/polymarket-bot/data/market_panel.json"
-SUMMARY_PATH = "/home/polybot/polymarket-bot/data/.ensemble_zone_logistic_summary.json"
+PANEL_PATH = "./data/market_panel.json"
+SUMMARY_PATH = "./data/.ensemble_zone_logistic_summary.json"
 
 CD_FLOOR = 16          # never fire at cd <= 15 (unreliable fills)
 SCAN_START = 200       # first-trigger scan begins at cd <= 200 (validated mean-rev window)

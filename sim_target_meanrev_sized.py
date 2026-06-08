@@ -58,7 +58,7 @@ import random
 import statistics
 from collections import defaultdict
 
-PANEL_PATH = "/home/polybot/polymarket-bot/data/market_panel.json"
+PANEL_PATH = "./data/market_panel.json"
 
 MID_LO, MID_HI = 0.40, 0.60
 CD_FLOOR = 16          # never fire at cd <= 15
@@ -491,9 +491,9 @@ def main():
         "best_median_under_dd_mean": best_median_under_dd_mean,
         "n_markets": len(panel),
     }
-    with open("/home/polybot/polymarket-bot/data/.meanrev_sized_summary.json", "w") as f:
+    with open("./data/.meanrev_sized_summary.json", "w") as f:
         json.dump({"answer": answer, "all_results": results}, f, indent=2)
-    print("\n[wrote /home/polybot/polymarket-bot/.meanrev_sized_summary.json]")
+    print("\n[wrote ./.meanrev_sized_summary.json]")
 
     return answer
 

@@ -65,7 +65,7 @@ import random
 import statistics
 import sys
 
-PANEL_PATH = "/home/polybot/polymarket-bot/data/market_panel.json"
+PANEL_PATH = "./data/market_panel.json"
 START_BAL = 9.0
 CD_FLOOR = 15          # exclude cd <= 15 (unreliable fills)
 MC_RUNS = 2000        # full precision for final reported configs

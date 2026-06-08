@@ -102,7 +102,7 @@ import math
 import random
 import statistics
 
-PANEL_PATH = "/home/polybot/polymarket-bot/data/market_panel.json"
+PANEL_PATH = "./data/market_panel.json"
 
 # ---- fixed edge parameters (the CONFIRMED deployable config) ----
 CD_FLOOR = 16          # never fire at cd <= 15
@@ -537,9 +537,9 @@ def main():
         "n_safe": len(safe),
         "n_target": len(target),
     }
-    with open("/home/polybot/polymarket-bot/data/.kelly_dd_constrained_summary.json", "w") as fh:
+    with open("./data/.kelly_dd_constrained_summary.json", "w") as fh:
         json.dump({"answer": answer, "all_results": results}, fh, indent=2)
-    print("\n[wrote /home/polybot/polymarket-bot/.kelly_dd_constrained_summary.json]")
+    print("\n[wrote ./.kelly_dd_constrained_summary.json]")
     return answer, best_safe, units, n_total, n_fired
 
 
