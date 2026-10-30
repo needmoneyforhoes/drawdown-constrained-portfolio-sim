@@ -39,3 +39,8 @@ python3 sim_target_existing_cheapEV_portfolio.py
 Reads `$DATA_DIR` from the private polymarket-data repo. Four families load `market_panel.json` (per-market tick panels with winners). `sim_target_existing_cheapEV_portfolio.py` parses `race_test_btc-updown-5m-*.log` from `quant_bots_logs_replay/`. Paths are hard-coded to `./data`; edit `PANEL_PATH` / `LOG_DIR` to relocate. Output JSONs write back to `./data` and are git-ignored.
 
 Offline only; no wallet, key, or network access, and no real funds.
+
+## Feedback
+
+Suggestions, improvements, or something not working? Please
+[open an issue](https://github.com/needmoneyforhoes/drawdown-constrained-portfolio-sim/issues/new). Pull requests are welcome too.
